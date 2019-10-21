@@ -131,7 +131,7 @@ void mine(randomx_vm* vm, std::atomic<uint32_t>& atomicNonce, AtomicHash& result
 }
 
 int main(int argc, char** argv) {
-	bool softAes, miningMode, verificationMode, help, largePages, jit, secure, ssse3, avx2, autoFalgs,
+	bool softAes, miningMode, verificationMode, help, largePages, jit, secure, ssse3, avx2, autoFlags;
 	int noncesCount, threadCount, initThreadCount;
 	uint64_t threadAffinity;
 	int32_t seedValue;
@@ -176,7 +176,7 @@ int main(int argc, char** argv) {
 	if(autoFlags)
 	{
 	  initThreadCount = std::thread::hardware_concurrency();
-	  flags = randomx_get_flags;
+	  flags = randomx_get_flags();
 	}
 	else
 	{
