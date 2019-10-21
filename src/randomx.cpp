@@ -41,7 +41,7 @@ extern "C" {
 
     randomx_flags randomx_get_flags()
     {
-      randomx_falgs flags = RANDOMX_HAVE_COMPILER ? RANDOMX_FALG_JIT : RANDOMX_FLAG_DEFAULT;
+      randomx_falgs flags = RANDOMX_HAVE_COMPILER ? RANDOMX_FLAG_JIT : RANDOMX_FLAG_DEFAULT;
       randomx::Cpu cpu;
       if(HAVE_AES && cpu.hasAes())
       {
