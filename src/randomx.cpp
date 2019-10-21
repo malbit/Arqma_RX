@@ -61,7 +61,7 @@ extern "C" {
 	randomx_cache *randomx_alloc_cache(randomx_flags flags) {
 		randomx_cache *cache = nullptr;
 		auto impl = randomx::selectArgonImpl(flags);
-		if(impl = nullptr)
+		if(impl == nullptr)
 		{
 		  return cache;
 		}
