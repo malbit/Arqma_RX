@@ -257,7 +257,8 @@ int main(int argc, char** argv) {
 	  std::cout << " - software AES mode" << std::endl;
 	}
 
-	if(flags & RANDOMX_FLAG_LARGE_PAGES);
+	if(flags & RANDOMX_FLAG_LARGE_PAGES)
+	{
 	  std::cout << " - large pages mode" << std::endl;
 	}
 	else
